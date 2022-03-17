@@ -53,10 +53,6 @@ public class Search extends HttpServlet {
 
                         out.print("<td>"+rs.getString(1)+"</td></tr>");
 
-                        out.print("<tr><td>"+rsmd.getColumnName(2)+"</td>");
-
-                        out.print("<td>"+rs.getString(2)+"</td></tr>");
-
                         out.print("<tr><td>"+rsmd.getColumnName(3)+"</td>");
 
                         out.print("<td>"+rs.getString(3)+"</td></tr>");
@@ -96,13 +92,16 @@ public class Search extends HttpServlet {
 
                      out.print("<td>"+rs1.getString(4)+"</td></tr>");    
                      
-                     
+                     int x=Integer.parseInt(rs1.getString(3))*12;
+                     int y=Integer.parseInt(rs1.getString(4));
+                     int z=x+y;
+                     out.print("<td>"+" Annual Salary is : "+ z +"</td></tr>");  
                      out.print("<td> </td>");
                   }
 
                      out.print("</table>");
 
- 
+
 
               }catch (Exception e2)
 
